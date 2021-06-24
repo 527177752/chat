@@ -1,3 +1,5 @@
+简单微信小程序聊天即时通讯
+
 后端采用spring boot + mybatis puls
 
 数据库mysql
