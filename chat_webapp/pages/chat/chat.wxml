@@ -1,0 +1,31 @@
+<scroll-view  scroll-y class="cu-chat"  scroll-top="{{scrollTop}}" style="height:calc(100vh - 50px - {{high}}px)" scroll-with-animation="{{scrollWithAnimation}}">
+    <block wx:for="{{list}}" wx:key="{{item.id}}">
+      <!-- <view wx:if="{{item.sendId != myId}}" class="userName">
+        {{item.name}}
+      </view> -->
+      <view class="cu-item {{item.sendId == myId ? 'self' : ''}}">
+        <view wx:if="{{item.sendId != myId}}" class="cu-avatar radius" style="background-image:url({{item.image}});">
+        </view>
+      <view class="main">
+        <view class="content {{item.sendId == myId ? 'bg-green' : ''}} shadow">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+        <view  wx:if="{{item.sendId == myId}}" class="cu-avatar radius" style="background-image:url({{item.image}});"></view>
+      <view class="date">{{item.time}}</view>
+    </view>
+   
+  </block>
+</scroll-view>
+
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text class="cuIcon-sound text-grey"></text>
+  </view>
+  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10" value="{{sendMsg}}" bindinput="bindinput" ></input>
+  <view class="action">
+    <text class="cuIcon-emojifill text-grey"></text>
+  </view>
+  <button class="cu-btn bg-green shadow" bindtap="send">发送</button>
+</view>
+

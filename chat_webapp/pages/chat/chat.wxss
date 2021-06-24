@@ -1,0 +1,8 @@
+page{
+  padding-bottom: 100rpx;
+}
+.userName{
+  margin-left: 15px;
+  margin-bottom: -12px;
+  color: rgb(201, 189, 189);
+}

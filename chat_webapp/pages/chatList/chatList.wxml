@@ -1,0 +1,46 @@
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 消息列表
+    </view>
+  </view>
+
+
+  <view class="cu-list menu-avatar">
+    <view class="cu-item" bindtap="goChat" data-id="{{1}}" data-name="张三">
+      <view class="cu-avatar round lg" style="background-image:url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2776786863,2619058922&fm=26&gp=0.jpg);">
+      <view class="cu-tag badge" wx:if="{{chat2to1&&chat2to1>0}}">{{chat2to1}}</view>
+      </view>
+      <view class="content">
+        <view class="text-grey">张三</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class="text-red  margin-right-xs"></text> {{chat2to1Content}}
+          </text>
+        </view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs">{{chat2to1Time}}</view>
+      </view>
+    </view>
+
+
+    <view class="cu-item" bindtap="goChat" data-id="{{3}}" data-name="王五">
+      <view class="cu-avatar round lg" style="background-image:url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201711%2F04%2F20171104043209_tsKiU.thumb.700_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1626838824&t=cb64dee716658be1872b79ea52312666);">
+      <view class="cu-tag badge" wx:if="{{chat2to3&&chat2to3>0}}">{{chat2to3}}</view>
+      </view>
+      <view class="content">
+        <view class="text-grey">王五</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class="text-red  margin-right-xs"></text> {{chat2to3Content}}
+          </text>
+        </view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs">{{chat2to3Time}}</view>
+      </view>
+    </view>
+   
+  </view>
+
+   
